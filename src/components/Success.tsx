@@ -1,6 +1,6 @@
 export const Success = () => {
 	return (
-		<div className='bg-green-200 px-6 py-4 my-4 rounded-md text-lg flex items-center mx-auto w-3/4 xl:w-2/4'>
+		<div className='bg-green-200 px-6 py-4 my-4 rounded-md md:text-xs lg:text-base flex items-center mx-auto w-3/4 xl:w-2/4'>
 			<svg viewBox='0 0 24 24' className='text-green-600 w-5 h-5 sm:w-5 sm:h-5 mr-3'>
 				<path
 					fill='currentColor'

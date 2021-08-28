@@ -1,6 +1,6 @@
 export const Error = () => {
 	return (
-		<div className='bg-red-200 px-6 py-4 my-4 rounded-md text-lg flex items-center mx-auto w-3/4 xl:w-2/4'>
+		<div className='bg-red-200 px-6 py-4 my-4 rounded-md flex md:text-xs lg:text-base items-center mx-auto w-3/4 xl:w-2/4'>
 			<svg viewBox='0 0 24 24' className='text-red-600 w-5 h-5 sm:w-5 sm:h-5 mr-3'>
 				<path
 					fill='currentColor'
