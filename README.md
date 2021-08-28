@@ -1,2 +1,1 @@
-# json utility
- AWS Lambda Events utility
+# JSON Utility
