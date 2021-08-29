@@ -19,7 +19,6 @@ class JSONStore implements IJSON {
 		this.isCopied = false;
 		this.isJSON = false;
 		this.json = '';
-
 	}
 
 	@computed
@@ -41,7 +40,7 @@ class JSONStore implements IJSON {
 
 	@action
 	storeJSON(input: string | undefined) {
-		if (this.isValidJSON(input)) return (this.json = this.stringyMingy(input as string));
+		if (this.isValidJSON(input)) return (this.json = this.stringyMingy(input!));
 	}
 
 	@action
