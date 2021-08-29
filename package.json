@@ -3,14 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@types/jest": "^27.0.1",
-		"@types/node": "^16.7.4",
-		"@types/react": "^17.0.19",
-		"@types/react-copy-to-clipboard": "^5.0.1",
-		"@types/react-dom": "^17.0.9",
 		"autoprefixer": "10.x",
 		"cross-env": "7.x",
 		"delay-cli": "^1.1.0",
+		"mobx": "^6.3.2",
+		"mobx-react": "^7.2.0",
 		"npm-run-all": "4.x",
 		"postcss": "8.x",
 		"postcss-cli": "8.x",
@@ -46,5 +43,14 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"@types/node": "^16.7.4",
+		"@types/react": "^17.0.19",
+		"@types/react-copy-to-clipboard": "^5.0.1",
+		"@types/react-dom": "^17.0.9",
+		"i": "^0.3.6",
+		"npm": "^7.21.1",
+		"tailwind-styled-components": "^2.0.3"
 	}
 }
