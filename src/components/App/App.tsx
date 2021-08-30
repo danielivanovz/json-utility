@@ -13,7 +13,9 @@ export const App = observer(() => {
 		<FlexWrapper>
 			<TitleBox>
 				<p className='mx-2'>JSON minify-stringify</p>
-				<Icon.Github />
+				<a href='https://github.com/heyiamZer0/json-utility'>
+					<Icon.Github />
+				</a>
 			</TitleBox>
 
 			<InnerWrapper>
@@ -27,10 +29,7 @@ export const App = observer(() => {
 					{store.isJSON ? null : <Error />}
 				</TextAreaContainer>
 				<TextAreaContainer>
-					<textarea
-						value={store.input}
-						className={textArea}
-					/>
+					<textarea value={store.input} className={textArea} />
 
 					<CopyToClipboard
 						//@ts-ignore
@@ -38,10 +37,10 @@ export const App = observer(() => {
 						onCopy={() => {
 							store.setCopy(true);
 						}}
-					>	
-					<CopyButton>{store.isJSON ? <Icon.Copy /> : null}</CopyButton>
+					>
+						<CopyButton>{store.isJSON ? <Icon.Copy /> : null}</CopyButton>
 					</CopyToClipboard>
-					{store.isCopied ? <Success/> : store.isCopied}
+					{store.isCopied ? <Success /> : store.isCopied}
 				</TextAreaContainer>
 			</InnerWrapper>
 		</FlexWrapper>
