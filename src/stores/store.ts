@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { action, computed, makeAutoObservable } from 'mobx';
 
 export interface IJSON {
@@ -40,7 +41,7 @@ class JSONStore implements IJSON {
 
 	@action
 	storeJSON(input: string | undefined) {
-		if (this.isValidJSON(input)) return (this.json = this.stringyMingy(input!));
+		this.isValidJSON(input) && (this.json = this.stringyMingy(input!))
 	}
 
 	@action
@@ -52,6 +53,16 @@ class JSONStore implements IJSON {
 	setInput(input: string | undefined) {
 		this.isValidJSON(input) ? (this.input = this.stringyMingy(input!)) : (this.input = input);
 		this.isCopied = false;
+	}
+
+	@action
+	reverse(input: string){
+		try {
+			const tmp: string | object = JSON.parse(input)
+		typeof tmp === 'object' ? '' :  this.input = JSON.parse(input)
+		} catch (error) {
+			console.log("Already!")
+		}
 	}
 }
 

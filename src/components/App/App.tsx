@@ -5,7 +5,7 @@ import { Error } from '../Error';
 import store from '../../stores/store';
 import { observer } from 'mobx-react';
 import * as Icon from '../icons';
-import { FlexWrapper, TitleBox, InnerWrapper, TextAreaContainer, textArea, CopyButton } from './styled';
+import { FlexWrapper, TitleBox, InnerWrapper, TextAreaContainer, textArea, CopyButton, ReverseButton } from './styled';
 
 export const App = observer(() => {
 	const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -28,9 +28,12 @@ export const App = observer(() => {
 					/>
 					{store.isJSON ? null : <Error />}
 				</TextAreaContainer>
+
 				<TextAreaContainer>
 					<textarea value={store.input} className={textArea} />
-
+					<ReverseButton onClick={() => store.reverse(inputRef.current?.value!)}>
+						{store.input ? <Icon.Back /> : null}
+					</ReverseButton>
 					<CopyToClipboard
 						//@ts-ignore
 						text={store.input}
