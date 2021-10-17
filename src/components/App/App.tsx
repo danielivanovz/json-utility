@@ -5,10 +5,11 @@ import { Error } from '../Error';
 import store from '../../stores/store';
 import { observer } from 'mobx-react';
 import * as Icon from '../icons';
-import { FlexWrapper, TitleBox, InnerWrapper, TextAreaContainer, textArea, CopyButton, ReverseButton } from './styled';
+import { FlexWrapper, TitleBox, InnerWrapper, TextAreaContainer, CopyButton, ReverseButton, textareaClass, textArea } from './styled';
 
 export const App = observer(() => {
 	const inputRef = useRef<HTMLTextAreaElement>(null);
+
 	return (
 		<FlexWrapper>
 			<TitleBox>
@@ -24,7 +25,7 @@ export const App = observer(() => {
 						autoFocus
 						ref={inputRef}
 						onChange={() => store.setInput(inputRef.current?.value)}
-						className={textArea}
+						className={textareaClass(store.isJSON)}
 					/>
 					{store.isJSON ? null : <Error />}
 				</TextAreaContainer>

@@ -22,6 +22,7 @@ absolute bottom-6 md:bottom-36 right-12 md:right-32 w-10 h-10
 
 export const textArea = 'bg-gray-100 no-scrollbar font-FiraMono text-xs outline-none focus:ring-2 focus:ring-indigo-400 p-10 px-4  h-full w-full'
 
+export const textareaClass = (isJSON: boolean) => "bg-gray-100 no-scrollbar font-FiraMono text-xs outline-none p-10 px-4 h-full w-full focus:ring-2 " + (isJSON ? 'focus:ring-green-300' : 'focus:ring-red-300')
 
 export const ReverseButton = tw.button`
 absolute bottom-6 md:bottom-36 right-24 md:right-44 w-10 h-10
